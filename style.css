@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(white,grey);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width:50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: linear-gradient(white,grey);
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover{
+    background-color: red;
+    transition-duration: 0.5s;
+    color: white
+}
+
+input{
+    height:40px;
+    width:50%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+input:focus{
+    border-color: red;
+}
+
+.error p{
+    color: red;
+}
