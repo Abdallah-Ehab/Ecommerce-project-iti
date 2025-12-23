@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logo{
+    margin: 20px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    background-color: red;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    margin: 10px;
+}
+
+#search{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.cart i{
+    font-size: 20px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart i::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+}
+
+.carouselContainer{
+    position: relative;
+    margin: 40px auto;
+    width:75%;
+    border-radius: 10px;
+    background-color: grey;
+    overflow-x: hidden;
+    cursor: grab;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.carouselContainer .dragging{
+    cursor: grabbing;
+}
+
+.carousel{
+    scroll-behavior: smooth;
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 3 - 20px);
+    gap: 5px;
+    scrollbar-width: none;  
+    -ms-overflow-style: none;
+    overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+.arrowRight{
+    position: absolute;
+    right: 0px;
+}
+
+.arrowLeft{
+    position: absolute;
+    left: 0px;
+}
+
+.arrowLeft,.arrowRight{
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    grid-auto-columns: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel{
+        grid-auto-columns: 100%;
+    }
+}
+
+.productGrid {
+    width: 75%;
+    margin: 100px auto;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.productCard {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.productCard:hover{
+    transform: translateY(-10%);
+    cursor: pointer;
+    transition: transform 0.5s ease-out;
+}
+
+
+.productImage {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.productImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.productInfo {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.productName {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.productActions {
+    display: flex;
+    gap: 10px;
+}
+
+.productActions button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.productActions button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.productActions i {
+    font-size: 14px;
+}
+
+
+
+
