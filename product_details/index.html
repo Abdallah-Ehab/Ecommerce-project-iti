@@ -3,50 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Details - No-name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../global_style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../cartManager.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-   <nav>
+    <nav>
         <img class="logo" src="logo.png" alt="logo">
-        <input id="search" type="search">
+        <input id="search" type="search" placeholder="Search products...">
         <ul>
-            <li><a href="">browse</a></li>
+            <li><a href="../home/index.html">browse</a></li>
             <li><a href="">featured</a></li>
             <li><a href="">products</a></li>
             <li><a href="">about</a></li>
             <li class="cart">
-                <a href="">
+                <a href="../product_cart/cart.html">
                     <i class="fa-solid fa-cart-arrow-down"></i>
-
+                    <span class="cartBadge">0</span>
                 </a>
             </li>
         </ul>
     </nav>
-    <!-- this will be our image later but I'm high asf right now -->
-    <div class="productImage">
-        <img src="" alt="">
+
+    <div class="container">
+        <a href="../home/index.html" class="backButton">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Products</span>
+        </a>
+
+        <div class="productDetailContainer glass">
+            <div class="imageSection">
+                <div class="mainImage">
+                    <img id="currentImage" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=600&fit=crop" alt="Premium Designer Watch">
+                    <div class="imageBadge">NEW</div>
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail active" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&h=150&fit=crop" alt="Thumbnail 1">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=150&h=150&fit=crop" alt="Thumbnail 2">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=150&h=150&fit=crop" alt="Thumbnail 3">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=150&h=150&fit=crop" alt="Thumbnail 4">
+                </div>
+            </div>
+
+            <div class="detailsSection">
+                <div class="productHeader">
+                    <span class="category">Luxury Collection</span>
+                    <h1 class="productTitle">Premium Designer Watch</h1>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="ratingText">4.5 (128 reviews)</span>
+                    </div>
+                </div>
+
+                <div class="priceSection">
+                    <span class="currentPrice">$299<span class="decimal">.99</span></span>
+                    <span class="originalPrice">$399.99</span>
+                    <span class="discount">25% OFF</span>
+                </div>
+
+                <div class="description">
+                    <h3>Description</h3>
+                    <p>Experience timeless elegance with our Premium Designer Watch. Crafted with precision and attention to detail, this masterpiece combines sophisticated design with cutting-edge technology. Perfect for those who appreciate luxury and functionality.</p>
+                </div>
+
+                <div class="features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Swiss precision movement</li>
+                        <li><i class="fa-solid fa-check"></i> Sapphire crystal glass</li>
+                        <li><i class="fa-solid fa-check"></i> Water resistant up to 100m</li>
+                        <li><i class="fa-solid fa-check"></i> Genuine leather strap</li>
+                        <li><i class="fa-solid fa-check"></i> 2-year warranty</li>
+                    </ul>
+                </div>
+
+                <div class="options">
+                    <div class="option">
+                        <label>Color</label>
+                        <div class="colorOptions">
+                            <button class="colorBtn active" data-color="black" style="background: #1a1a1a;"></button>
+                            <button class="colorBtn" data-color="silver" style="background: #c0c0c0;"></button>
+                            <button class="colorBtn" data-color="gold" style="background: #d4af37;"></button>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <label>Quantity</label>
+                        <div class="quantityControl">
+                            <button class="quantityBtn" id="decreaseBtn">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+                            <button class="quantityBtn" id="increaseBtn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="addToCartBtn">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>Add to Cart</span>
+                    </button>
+                    <button class="wishlistBtn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="shipping">
+                    <div class="shippingItem">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Free shipping on orders over $100</span>
+                    </div>
+                    <div class="shippingItem">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>30-day easy returns</span>
+                    </div>
+                    <div class="shippingItem">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Secure payment guaranteed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- this should be the product details -->
-<section class="productDetails">
-  <h1>Product Name</h1>
 
-  <ul class="info">
-    <li>
-      <span>Price</span>
-      <strong>$49.99</strong>
-    </li>
-    <li>
-      <span>Category</span>
-      <strong>Electronics</strong>
-    </li>
-    <li>
-      <span>Quantity</span>
-      <strong>12</strong>
-    </li>
-  </ul>
-</section>
-
-<button class="addToCart">Add to cart</button>
-
+    <footer>
+        <a href="#top">top</a>
+    </footer>
 </body>
 </html>

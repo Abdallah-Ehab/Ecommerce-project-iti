@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../global_style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="bodyContainer">
+
+        <section class="leftSection glass">
+            <div class="propaganda">
+                <h1 class="siteName">No-name</h1>
+                <div class="title">
+                    <span class="divider"></span>
+                    <h2>tailored luxury</h2>
+                </div>
+                <h1 class="slogan">Objects of desire, curated for you.</h1>
+                <h6 class="sentence">Discover limited-edition drops, concierge service, and personal stylists that guide every purchase.</h6>
+                <ul class="qualities">
+                    <li>Complimentary delivery & returns</li>
+                    <li>24/7 private styling</li>
+                    <li>Members-only capsule collections</li>
+                </ul>
+            </div>
+        </section>
+        <section class="rightSection glass">
+            <div class="registerHeader">
+                <h2>Register</h2>
+                <p>Create your Maison Lumen account</p>
+            </div>
+            <form action="post">
+                <label for="userName">user-name</label>
+                <input type="text" name="userName" id="userName" placeholder="Enter your full name">
+                <span class="validation-message"></span>
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" placeholder="example@email.com">
+                <span class="validation-message"></span>
+                <label for="password">password</label>
+                <div class="passwordWrapper">
+                    <input type="password" name="password" id="password" placeholder="At least 8 characters">
+                    <button type="button" class="eye-toggle" aria-label="Toggle password visibility">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <span class="validation-message"></span>
+                <div class="password-strength">
+                    <div class="strength-bar"></div>
+                    <span class="strength-text"></span>
+                </div>
+                <label for="confirmPassword">confirm password</label>
+                <div class="passwordWrapper">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Re-enter your password">
+                    <button type="button" class="eye-toggle" aria-label="Toggle password visibility">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <span class="validation-message"></span>
+                <button class="submitButton" type="submit" disabled>Create Account</button>
+            </form>
+            <h3>already have an account, login here <a class="loginLink" href="../login/login.html">login</a></h3>
+        </section>
+    </div>
+</body>
+</html>

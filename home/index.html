@@ -3,111 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>No-name - Tailored Luxury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../global_style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../cartManager.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav>
-        <img class="logo" src="logo.png" alt="logo">
-        <input id="search" type="search">
+        <img class="logo" id="top" src="logo.png" alt="logo">
+        <input id="search" type="search" placeholder="Search products...">
         <ul>
-            <li><a href="">browse</a></li>
+            <li><a href="index.html">browse</a></li>
             <li><a href="">featured</a></li>
             <li><a href="">products</a></li>
             <li><a href="">about</a></li>
             <li class="cart">
-                <a href="">
+                <a href="../product_cart/cart.html">
                     <i class="fa-solid fa-cart-arrow-down"></i>
-
+                    <span class="cartBadge">0</span>
                 </a>
             </li>
         </ul>
     </nav>
+    
+    <section class="heroSection glass">
+        <div class="heroContent">
+            <h1 class="siteName">No-name</h1>
+            <div class="title">
+                <span class="divider"></span>
+                <h2>tailored luxury</h2>
+            </div>
+            <h1 class="slogan">Objects of desire, curated for you.</h1>
+            <p class="sentence">Discover limited-edition drops, concierge service, and personal stylists that guide every purchase.</p>
+        </div>
+    </section>
+
     <div class="carouselContainer">
         <button class="arrowRight">
             <i class="fa-solid fa-angle-right"></i>
         </button>
         
         <ul class="carousel">
-           <li class="card" ></li>
-           <li class="card" ></li>
-           <li class="card"></li>
-           <li class="card"></li>
-           <li class="card"></li>
-           <li class="card"></li>
-           <li class="card"></li>
-           <li class="card"></li>
-           <li class="card"></li>
-           <li class="card"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=280&fit=crop" alt="Luxury Watch"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=280&fit=crop" alt="Designer Bag"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=280&fit=crop" alt="Premium Shoes"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=280&fit=crop" alt="Designer Perfume"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=280&fit=crop" alt="Sunglasses"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&h=280&fit=crop" alt="Leather Wallet"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=280&fit=crop" alt="Designer Jacket"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&h=280&fit=crop" alt="Gold Necklace"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=280&fit=crop" alt="Headphones"></li>
+           <li class="card"><img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?w=400&h=280&fit=crop" alt="Luxury Belt"></li>
         </ul>
         <button class="arrowLeft">
 
             <i class="fa-solid fa-angle-left"></i>
         </button>
     </div>
+
+    <section class="filterSection">
+
+        <select name="price" id="price">
+            <option disabled selected value="">price</option>
+            <option value="50">10-50</option>
+            <option value="100">50-100</option>
+            <option value="1000">100 and more</option>
+        </select>
+        <select name="category" id="category">
+            <option disabled selected value="">category</option>
+            <option value="clothes">clothes</option>
+            <option value="food">food</option>
+            <option value="devices">devices</option>
+        </select>
+        <button class="filter">filter</button>
+    </section>
     
     <div class="productGrid">
         
-            <div class="productCard">
+            <div class="productCard" data-id="1" data-name="Luxury Watch" data-price="299.99">
         <div class="productImage">
-            <img src="https://via.placeholder.com/300x300" alt="Product name">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Luxury Watch">
+            <div class="productOverlay">
+                <button class="viewProduct" title="View Details">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
         </div>
 
         <div class="productInfo">
-            <h3 class="productName">Product Name</h3>
-
-            <div class="productActions">
-                <button class="addToCart">
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-
-                <button class="viewProduct">
+            <h3 class="productName">Luxury Watch</h3>
+            <p class="productPrice">$299<span class="priceDecimal">.99</span></p>
+            <button class="addToCart">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add to Cart</span>
+            </button>
+        </div> 
+    </div>
+            <div class="productCard" data-id="2" data-name="Designer Bag" data-price="459.99">
+        <div class="productImage">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=400&fit=crop" alt="Designer Bag">
+            <div class="productOverlay">
+                <button class="viewProduct" title="View Details">
                     <i class="fa-regular fa-eye"></i>
                 </button>
-            </div> 
-        </div> 
-    </div>
-            <div class="productCard">
-    <div class="productImage">
-        <img src="https://via.placeholder.com/300x300" alt="Product name">
-    </div>
+            </div>
+        </div>
 
-    <div class="productInfo">
-        <h3 class="productName">Product Name</h3>
-
-        <div class="productActions">
+        <div class="productInfo">
+            <h3 class="productName">Designer Bag</h3>
+            <p class="productPrice">$459<span class="priceDecimal">.99</span></p>
             <button class="addToCart">
                 <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <button class="viewProduct">
-                <i class="fa-regular fa-eye"></i>
+                <span>Add to Cart</span>
             </button>
         </div> 
-    </div> 
-</div>
-        <div class="productCard">
-    <div class="productImage">
-        <img src="https://via.placeholder.com/300x300" alt="Product name">
     </div>
+        <div class="productCard" data-id="3" data-name="Premium Shoes" data-price="189.99">
+        <div class="productImage">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop" alt="Premium Shoes">
+            <div class="productOverlay">
+                <button class="viewProduct" title="View Details">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
+        </div>
 
-    <div class="productInfo">
-        <h3 class="productName">Product Name</h3>
-
-        <div class="productActions">
+        <div class="productInfo">
+            <h3 class="productName">Premium Shoes</h3>
+            <p class="productPrice">$189<span class="priceDecimal">.99</span></p>
             <button class="addToCart">
                 <i class="fa-solid fa-plus"></i>
+                <span>Add to Cart</span>
             </button>
-
-            <button class="viewProduct">
-                <i class="fa-regular fa-eye"></i>
-            </button>
-        </div> 
+        </div>
     </div>
-</div>
 
     </div>
-    <script src="script.js"></script>
 </body>
+<script src="slider.js"></script>
+<script src="add_to_cart.js"></script>
+<footer>
+    <a href="#top">top</a>
+</footer>
 </html>

@@ -1,0 +1,67 @@
+:root {
+    /* Primary Golden Colors */
+    --primary-gold: #d4af37;
+    --primary-gold-light: #f4d03f;
+    --primary-gold-dark: #b8860b;
+    
+    /* Secondary Colors */
+    --secondary-white: #cfcfcf;
+    --secondary-cream: #fbe3a6;
+    --secondary-beige: #dfc59b;
+    
+    /* Accent Colors */
+    --accent-rose: #ce8b5e;
+    --accent-bronze: #cd7f32;
+    --accent-champagne: #f1e0c5;
+    
+    /* Text Colors */
+    --text-dark: #2c2c2c;
+    --text-medium: #5a5a5a;
+    --text-light: #8a8a8a;
+    --text-white: #ffffff;
+    
+    /* Background Colors */
+    --bg-light: #fdfcfa;
+    --bg-white: #ffffff;
+    --bg-cream: #f8f6f1;
+    --bg-gradient: linear-gradient(135deg, #c7c7c7 0%, #bdb6aa 50%, #c4b69b 100%);
+    
+    /* Glass Effect */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --glass-shadow: rgba(212, 175, 55, 0.1);
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    --gradient-gold-hover: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+    --gradient-subtle: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(212, 175, 55, 0.05) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(212, 175, 55, 0.15);
+    --shadow-md: 0 4px 16px rgba(212, 175, 55, 0.2);
+    --shadow-lg: 0 8px 32px rgba(212, 175, 55, 0.25);
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    
+    /* Transitions */
+    --transition-fast: 200ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    min-width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-gradient);
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - No-name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../global_style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../cartManager.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="logo.png" alt="logo">
+        <input id="search" type="search" placeholder="Search products...">
+        <ul>
+            <li><a href="../home/index.html">browse</a></li>
+            <li><a href="">featured</a></li>
+            <li><a href="">products</a></li>
+            <li><a href="">about</a></li>
+            <li class="cart">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <span class="cartBadge" id="cartBadge">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="cartHeader">
+            <h1 class="cartTitle">Shopping Cart</h1>
+            <a href="../home/index.html" class="continueShopping">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Continue Shopping</span>
+            </a>
+        </div>
+
+        <div class="cartContent">
+            <div class="cartItems" id="cartItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+
+            <div class="cartSummary glass">
+                <h2>Order Summary</h2>
+                
+                <div class="summaryRow">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                
+                <div class="summaryRow">
+                    <span>Shipping</span>
+                    <span id="shipping">$0.00</span>
+                </div>
+                
+                <div class="summaryRow">
+                    <span>Tax (10%)</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="summaryRow total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+
+                <button class="checkoutBtn">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Proceed to Checkout</span>
+                </button>
+
+                <div class="securePayment">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Secure Payment Guaranteed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="emptyCart" id="emptyCart" style="display: none;">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h2>Your cart is empty</h2>
+            <p>Add some items to get started!</p>
+            <a href="../home/index.html" class="shopNowBtn">
+                <span>Shop Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#top">top</a>
+    </footer>
+</body>
+</html>
